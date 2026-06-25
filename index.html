@@ -5,9 +5,20 @@
         <meta charset="utf-8">
         <title>HTML lesson 1</title>
         <link rel="icon" href="hbo.png">
+        <style>
+            h1, h2, h3, h4, h5, h6
+            {
+                color:red;
+                font-family:Arial;
+            }
+            h2, h4, h6 
+            {
+                color:green;
+            }
+        </style>
     </head>
     <body>
-        <details>
+        <details open>
             <summary>Типы заголовков</summary>
             <h1>Заголовок 1. Может быть только 1 на странице</h1>
             <h2>Заголовок 2. Остальных заголовков может быть сколько угодно</h2>
@@ -34,10 +45,10 @@
         Как правило отображается поноширным шрифтом.
         Аналог RAW-строки в языке <b>C++</b>;</pre><br>
             <hr>
-            <pre>&#60</pre>
+            <pre>&#60;</pre>
         </details>
 
-        <details open>
+        <details>
             <summary>Дескрипторы логического форматирования</summary>
             <p>
                 Нужны для более глубокого анализа страницы поисковыми машинами.
@@ -50,7 +61,7 @@
             <strong><code>&#60;code&#62;</code></strong> &#8213;делает шрифт <code>моноширным</code>;<br>
             <strong><code>&#60;abbr&#62;</code>(Abbreviation)</strong> &#8213; в этот дескриптор обворачиваются аббревиатуры. Не имеет визуальгого эффекта;<br>
             <strong><code>&#60;cite&#62;</code>(Citation)</strong> &#8213; в этот дескриптор обворачиваются <cite>цитаты</cite>;<br>
-            
+
         </details>
 
         <details>
@@ -61,5 +72,6 @@
             </pre>
         </details>
 
+        <h2 style="color:red;"> CSS – Cascade Style Sheet (Каскадная таблица стилей)</h2>
     </body>
 </html>
