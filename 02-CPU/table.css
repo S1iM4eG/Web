@@ -2,6 +2,19 @@
 {
     border:solid 5px;
     border-collapse:collapse;
+    margin: 32px auto;
+}
+table:hover
+{
+    box-shadow: 0 0 50px gray;
+}
+tr:hover {
+    box-shadow: inset 0 -3px 10px 1px green;
+    /*Отбрасывыание теней
+    Отбрасывание теней выполняется при помощи box-shadow
+    box-shadow: [direction] x y blur spread color;
+        direction - направление отбрасывания тени, либо внутрь либо наружу. По умолчанию тень отбрасывается наружу (outset). Значение outset задавать нельзя. Для того чтобы тень отбрасывалась внутрь нужно задать inset. x и y - это смещение тени по осям соответственно. Положительные значения смещают вправо и вниз соответственно, отрицательные значения влево и вверх.
+*/
 }
 thead
 {
