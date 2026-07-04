@@ -1,0 +1,19 @@
+﻿body {
+    background-image: linear-gradient(to bottom, lightskyblue, seagreen);
+    background-attachment: fixed;
+}
+table {
+    border-collapse: collapse;
+    background-color: black;
+    margin: auto;
+}
+h1
+{
+    text-align: center;
+}
+td {
+    border: 5px solid lightskyblue;
+    padding: 1px;
+    width: 60px;
+    height: 22px;
+}
