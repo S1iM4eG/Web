@@ -1,0 +1,47 @@
+﻿body 
+{
+}
+table 
+{
+    border: solid 1px;
+    border-collapse: collapse;
+    margin: auto;
+    width: 1500px;
+    height: 800px;
+}
+thead {
+
+}
+.background 
+{
+    position: fixed;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    filter: blur(7px) opacity(95%);
+}
+td, tr, th
+{
+    border: solid 1px;
+    padding: 1px;
+    padding-left: 3px;
+}
+.yellow 
+{
+    background-color: yellow;
+    filter: brightness(0.90);
+}
+.green
+{
+    background-color:forestgreen;
+}
+.red 
+{
+    background-color: palevioletred;
+    margin: 40px;
+}
+.blue
+{
+    background-color:dodgerblue;
+    filter: brightness(0.8);
+}
