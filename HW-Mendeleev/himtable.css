@@ -6,6 +6,7 @@ table
     border: solid 1px;
     border-collapse: collapse;
     margin: auto;
+    font-weight: bold;
     width: 1500px;
     height: 800px;
 }
@@ -24,6 +25,7 @@ td, tr, th {
     border: solid 1px;
     padding: 1px;
     padding-left: 3px;
+    font-size: 14px;
 }
 
 .yellow {
@@ -51,4 +53,13 @@ th {
 
 .tdbackground {
     background-color: navajowhite;
+}
+.size 
+{
+    width: 50px;
+    font-size: 24px;
+}
+.digit 
+{
+    padding-left: 50px;
 }
