@@ -1,14 +1,14 @@
 ﻿body 
 {
 }
-table 
-{
+table {
     border: solid 1px;
     border-collapse: collapse;
     margin: auto;
     font-weight: bold;
     width: 1500px;
     height: 800px;
+    opacity: 0.85;
 }
 thead {
 }
@@ -48,18 +48,18 @@ td, tr, th {
 }
 
 th {
-    background-color: navajowhite;
+    background-color: rgba(255, 222, 173, 0.2);
 }
 
 .tdbackground {
-    background-color: navajowhite;
+    background-color: rgba(255, 222, 173, 0.2);
 }
 .size 
 {
     width: 50px;
-    font-size: 24px;
+    font-size: 25px;
 }
 .digit 
 {
-    padding-left: 50px;
+    padding-left: 45px;
 }
