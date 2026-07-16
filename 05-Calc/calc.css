@@ -164,7 +164,7 @@
 }
 .menu-bar > button:hover
 {
-    background-color:blue;
+    background-color:#5555BB;
     color:white;
 }
 /*//////////////////////////////////////////////////////////////////////////////////////////*/
@@ -200,20 +200,24 @@
     /*grid-gap:8px;*/
     grid-row-gap: 8px;
 }
+.calc-buttons button 
+{
+   width: 42px;
+   height: 30px;
+}
+.square {
+    width: 38px;
+    height: 38px;
+    border: solid 1px;
+}
 .clear-buttons 
 {
     grid-row:1;
     grid-column-start:2;
     grid-column-end:7;
 }
-.square 
+.clear-buttons > button
 {
-    width: 38px;
-    height: 38px;
-    border: solid 1px;
-}
-.calc-buttons button 
-{
-   width: 42px;
-   height: 30px;
+    width: 75px;
+    margin-left: 1px;
 }
