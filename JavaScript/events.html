@@ -12,26 +12,28 @@
     <div class="image-and-colors">
         <div class="load-image">
             <div class="image-container">
-                <img src="C:\Users\S1iM\source\repos\Web\JavaScript"*/ alt="Фото студента" id="image">
+                <img src="C:\Users\S1iM\source\repos\Web\JavaScript" alt="Фото студента" id="image">
             </div>
-            <input type="file" id="image-file" onchange="SetImage()">
+            <input type="file" id="image-file" onchange="setImage()">
             <div id="debug"></div>
         </div>
 
         <div class="colors">
             <div>
                 <lable for="background-color">Выберите цвет фона:</lable>
-                <input type="color" id="background-color" oninput="setBackgroundColor()">
+                <input type="color" id="background-color" oninput="setColor(event)">
+                <!--<input type="color" id="background-color" oninput="setBackgroundColor()">-->
             </div>
             <div>
                 <lable for="foreground-color">Выберите цвет текста:</lable>
-                <input type="color" id="foreground-color" oninput="setForegroundColor(event)">
+                <input type="color" id="foreground-color" oninput="setColor(event)">
+                <!--<input type="color" id="foreground-color" oninput="setForegroundColor(event)">-->
             </div>
         </div>
     </div>
 
     <script>
-        function SetImage() {
+        function setImage() {
             let filename = document.getElementById("image-file");
             //let reader = new FileReader();
             let file = filename.files[0];
@@ -44,15 +46,27 @@
             // }
             // reader.readAsDataURL(filename.files[0]);
         }
-        function setBackgroundColor() {
             //DOM - Document Object Model (Объектная модель документа).
             //Document document = new.Document();
+        function setBackgroundColor() {
             document.body.style.backgroundColor = document.getElementById("background-color").value;
         }
         function setForegroundColor(e) {
            // document.getElementByClassName("load-image")[0].style.backgroundColor = e.target.value;
             document.body.style.color = e.target.value;
         }
+        function setColor(e) {
+            console.log(e.target);
+            console.log(document.body.style['backgroundColor'];
+            console.log(document.body.style['background-color'];
+            document.body.style[e.target.id === 'background-color' ? 'background-color' : 'color'] = e.target.value;
+              //(e.target.id === "background-color" ? document.body.style.backgroundColor : document.body.style.color) = e.target.value;
+            /*if (e.target.id === "background-color")
+                document.body.style.backgroundColor = e.target.value;
+            else
+                document.body.style.color = e.target.value;*/
+        }
+        console.log(true === 1)
     </script>
 </body>
 </html>
