@@ -1,5 +1,19 @@
-﻿.image-container {
+﻿body{
+}
+
+.image-container, img {
+    border: solid 1px;
     width: 400px;
     height: 300px;
-    border: solid 1px;
+}
+
+.image-and-colors > .colors > div 
+{
+    display:flex;
+    justify-content: space-between;
+}
+
+.colors > div 
+{
+    margin: 16px;
 }
