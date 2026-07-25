@@ -6,13 +6,19 @@
     <link rel="stylesheet" href="events.css">
     <title>JavaScript Events</title>
 </head>
-<body>
+<body class="light">
+    <div class="header">
+        <h3>Header</h3>
+        <h3 id="mouse-coords"></h3>
+        <div id="switch-background"></div>
+        <!--<img src="moon.png" id="switch-background">-->
+    </div>
     <h1>JavaScript Events</h1>
 
-    <div class="image-and-colors">
+    <div class="images-and-colors">
         <div class="load-image">
             <div class="image-container">
-                <img src="C:\Users\S1iM\source\repos\Web\JavaScript" alt="Фото студента" id="image">
+                <img src="C:\Users\S1iM\source\repos\Web\JavaScript\13526711283432.jpg" alt="Фото студента" id="image">
             </div>
             <input type="file" id="image-file" onchange="setImage()">
             <div id="debug"></div>
@@ -67,6 +73,20 @@
                 document.body.style.color = e.target.value;*/
         }
         console.log(true === 1)
+
+        document.addEventListener("mousemove", trackMouse);
+        function trackMouse(e) {
+            // let coords = `Mouse: X = ${e.clientX}, Y = ${e.clientY}`;
+            document.getElementById("mouse-coords").innerHTML = `Mouse: X = ${e.clientX}, Y = ${e.clientY}`;
+            // console.log(coords);
+        }
+        document.getElementById("switch-background").addEventListener("click", switchBackground);
+        function switchBackground(e) {
+            //console.log(e.target.id);
+            //console.log(e.target.src);
+            //e.target.src = (e.target.src.includes('moon.png') ? 'sun.png' : 'moon.png');
+            document.body.className = document.body.className === 'dark' ? 'light' : 'dark';
+        }
     </script>
 </body>
 </html>
