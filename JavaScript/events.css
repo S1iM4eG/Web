@@ -17,8 +17,8 @@
     height:32px;
     background-size: 32px 32px;
     transition: 3s;
-/*    transition: background-image 3s, filter 3s;
-*/}
+/*    transition: background-image 3s, filter 3s;*/
+}
 .dark {
     background-color:#323232;
     color: white;
@@ -41,7 +41,7 @@
     height: 300px;
 }
 
-.images-and-colors > .colors > div {
+.images-and-colors, .colors > div {
     display: flex;
     justify-content: space-between;
 }
@@ -49,4 +49,13 @@
 .colors > div 
 {
     margin: 16px;
+}
+/* ///////////////////////////////////////////////////// */
+#clock
+{
+    font-size: 48px;
+    text-align: center;
+}
+#clock-controls{
+    font-size:24px;
 }

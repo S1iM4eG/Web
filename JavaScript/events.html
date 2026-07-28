@@ -15,78 +15,60 @@
     </div>
     <h1>JavaScript Events</h1>
 
-    <div class="images-and-colors">
-        <div class="load-image">
-            <div class="image-container">
-                <img src="C:\Users\S1iM\source\repos\Web\JavaScript\13526711283432.jpg" alt="Фото студента" id="image">
+    <details>
+        <summary>Картинки и цветы</summary>
+        <div class="images-and-colors">
+            <div class="load-image">
+                <div class="image-container">
+                    <img src="C:\Users\S1iM\source\repos\Web\JavaScript\13526711283432.jpg" alt="Фото студента" id="image">
+                </div>
+                <input type="file" id="image-file" onchange="setImage()">
+                <div id="debug"></div>
             </div>
-            <input type="file" id="image-file" onchange="setImage()">
-            <div id="debug"></div>
-        </div>
 
-        <div class="colors">
-            <div>
-                <lable for="background-color">Выберите цвет фона:</lable>
-                <input type="color" id="background-color" oninput="setColor(event)">
-                <!--<input type="color" id="background-color" oninput="setBackgroundColor()">-->
+            <div class="colors">
+                <div>
+                    <lable for="background-color">Выберите цвет фона:</lable>
+                    <input type="color" id="background-color" oninput="setColor(event)">
+                    <!--<input type="color" id="background-color" oninput="setBackgroundColor()">-->
+                </div>
+                <div>
+                    <lable for="foreground-color">Выберите цвет текста:</lable>
+                    <input type="color" id="foreground-color" oninput="setColor(event)">
+                    <!--<input type="color" id="foreground-color" oninput="setForegroundColor(event)">-->
+                </div>
+                <div>
+                    <lable for="transition-time">Выберите интервал времени смены дня и ночи:</lable>
+                    <input type="number" id="transition-time" oninput="setTime(event)">
+                    <!--<input type="color" id="foreground-color" oninput="setForegroundColor(event)">-->
+                </div>
             </div>
-            <div>
-                <lable for="foreground-color">Выберите цвет текста:</lable>
-                <input type="color" id="foreground-color" oninput="setColor(event)">
-                <!--<input type="color" id="foreground-color" oninput="setForegroundColor(event)">-->
-            </div>
+        </div>
+    </details>
+
+    <div id="full-time"></div>
+
+    <div id="clock">
+        <div id="current-time">
+            <span id="hours"></span>:
+            <span id="minutes"></span>:
+            <span id="seconds"></span>
+        </div>
+        <div id="current-date">
+            <span id="days"></span>.
+            <span id="months"></span>.
+            <span id="years"></span>
+        </div>
+        <div id="day-of-week"></div>
+        <div id="clock-controls">
+            <input type="checkbox" id="show-date"><label for="show-date">Показать дату</label>
+            <input type="checkbox" id="show-weekday"><label for="show-weekday">Показать день недели</label>
         </div>
     </div>
 
-    <script>
-        function setImage() {
-            let filename = document.getElementById("image-file");
-            //let reader = new FileReader();
-            let file = filename.files[0];
-            document.getElementById("debug").innerHTML = URL.createObjectURL(file); // filename.files[0].name;
-            document.getElementById("image").src = URL.createObjectURL(file);
-
-
-            // reader.onload = function (e) {
-            //     document.getElementById("image").src = e.target.result;
-            // }
-            // reader.readAsDataURL(filename.files[0]);
-        }
-            //DOM - Document Object Model (Объектная модель документа).
-            //Document document = new.Document();
-        function setBackgroundColor() {
-            document.body.style.backgroundColor = document.getElementById("background-color").value;
-        }
-        function setForegroundColor(e) {
-           // document.getElementByClassName("load-image")[0].style.backgroundColor = e.target.value;
-            document.body.style.color = e.target.value;
-        }
-        function setColor(e) {
-            console.log(e.target);
-            console.log(document.body.style['backgroundColor']);
-            console.log(document.body.style['background-color']);
-            document.body.style[e.target.id === 'background-color' ? 'background-color' : 'color'] = e.target.value;
-              //(e.target.id === "background-color" ? document.body.style.backgroundColor : document.body.style.color) = e.target.value;
-            /*if (e.target.id === "background-color")
-                document.body.style.backgroundColor = e.target.value;
-            else
-                document.body.style.color = e.target.value;*/
-        }
-        console.log(true === 1)
-
-        document.addEventListener("mousemove", trackMouse);
-        function trackMouse(e) {
-            // let coords = `Mouse: X = ${e.clientX}, Y = ${e.clientY}`;
-            document.getElementById("mouse-coords").innerHTML = `Mouse: X = ${e.clientX}, Y = ${e.clientY}`;
-            // console.log(coords);
-        }
-        document.getElementById("switch-background").addEventListener("click", switchBackground);
-        function switchBackground(e) {
-            //console.log(e.target.id);
-            //console.log(e.target.src);
-            //e.target.src = (e.target.src.includes('moon.png') ? 'sun.png' : 'moon.png');
-            document.body.className = document.body.className === 'dark' ? 'light' : 'dark';
-        }
+    <script src="events.js">
+        let a;
+        alert("Hello");
     </script>
 </body>
 </html>
